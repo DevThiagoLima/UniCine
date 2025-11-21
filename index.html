@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <title>Página Inicial</title>
 </head>
 <body>
@@ -30,8 +31,148 @@
         </div>
     </header>
 
-    <section class="secao__01">
-        
+    <section class="secao1_carrossel">
+        <div class="carrossel-conteudo"></div>
     </section>
+
+    <hr>
+
+    <section class="secao2_em__cartaz">
+        <h1 class="secao2__titulo"><img class="pipoca__esquerda" src="IMG/home/secao02/pipoca.png" alt=""> Em Cartaz <img class="pipoca__direita" src="IMG/home/secao02/pipoca.png" alt=""></h1>
+        <div class="box__cartaz">
+            <div class="box__cartaz__filme">
+                <img class="box__cartaz__filme__imagem" src="IMG/home/secao02/Blade-Runner__poster.jpg" alt="FILME 01">
+                <b><p class="box__cartaz__filme__nome">Blade Runner 2049</p></b>
+            </div>
+
+            <div class="box__cartaz__filme">
+                <img class="box__cartaz__filme__imagem" src="IMG/home/secao02/chainsaw-man__poster.jpg" alt="FILME 01">
+                <b><p class="box__cartaz__filme__nome">Chainsaw Man: O Filme - Arco da Reze</p></b>
+            </div>
+
+            <div class="box__cartaz__filme">
+                <img class="box__cartaz__filme__imagem" src="IMG/home/secao02/Interstellar_poster.jpg" alt="FILME 01">
+                <b><p class="box__cartaz__filme__nome">Interestelar</p></b>
+            </div>
+        </div>
+
+        <a class="secao02__botao" href="">Programação Completa</a>
+    </section>
+
+    <p class="divisoria">.</p>
+
+    <section class="secao3__em__breve">
+        <i><h1 class="secao3__titulo"><img class="pipoca__esquerda" src="IMG/home/secao03/ampulheta.png" alt=""> Em Breve <img class="pipoca__direita" src="IMG/home/secao03/ampulheta.png" alt=""></h1></i>
+
+        <div class="swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="box__geral">
+                        <div class="box1">
+                            <div class="box1__div__texto">
+                                <div class="box__cartaz__filme">
+                                    <img class=" box__cartaz__filme__imagem imagem_swipper" src="IMG/home/secao03/FNAF-2-poster.webp" alt="FILME 01">
+                                    <b><p class="box__cartaz__filme__nome">Five Nights at Freddy's 2</p></b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="box__geral">
+                        <div class="box1">
+                            <div class="box1__div__texto">
+                                <div class="box__cartaz__filme">
+                                    <img class="box__cartaz__filme__imagem imagem_swipper" src="IMG/home/secao03/jujutsu_kaisen_poster.webp" alt="FILME 01">
+                                    <b><p class="box__cartaz__filme__nome">Jujutsu Kaisen - Season 3</p></b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="box__geral">
+                        <div class="box1">
+                            <div class="box1__div__texto">
+                                <div class="box__cartaz__filme">
+                                    <img class="box__cartaz__filme__imagem imagem_swipper" src="IMG/home/secao03/vingadores_poster.webp" alt="FILME 01">
+                                    <b><p class="box__cartaz__filme__nome">Vingadores Doomsday</p></b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="box__geral">
+                        <div class="box1">
+                            <div class="box1__div__texto">
+                                <div class="box__cartaz__filme">
+                                    <img class="box__cartaz__filme__imagem imagem_swipper" src="IMG/home/secao03/Super_mario_poster.jpg" alt="FILME 01">
+                                    <b><p class="box__cartaz__filme__nome">Super Mario Bros 2</p></b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="box__geral">
+                        <div class="box1">
+                            <div class="box1__div__texto">
+                                <div class="box__cartaz__filme">
+                                    <img class="box__cartaz__filme__imagem imagem_swipper" src="IMG/home/secao03/sillent-hill_poster.jpg" alt="FILME 01">
+                                    <b><p class="box__cartaz__filme__nome">Sillent Hill - Regresso Para o Inferno</p></b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <!-- Botões de Navegação
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+
+            <!-- MOSTRA AS BOLINHAS DO SLIDE -->
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+    </section>
+
+    <p class="divisoria">.</p>
+
+    <footer class="rodape">
+        <p class="rodape__texto"><img class="icone__logo" src="IMG/home/icone__logo.png" alt="Logo"> "Entretenimento de qualidade, sempre ao seu alcance." <img class="icone__logo" src="IMG/home/icone__logo.png" alt="Logo"></p>
+    </footer>
+
+<!-- SCRIPT DO CARROSSEL - SEÇÃO 3 >> COMENTÁRIOS -->
+
+    <!-- Importando o Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".swiper", {
+    loop: true,
+    slidesPerView: 3,
+
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    autoplay: {
+        delay: 10000,
+        disableOnInteraction: false,
+    },
+});
+    </script>
 </body>
 </html>
