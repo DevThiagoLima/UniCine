@@ -1,0 +1,84 @@
+/* CONFIGURAÇÃO DE VARIÁVEIS */
+:root {
+
+    /* VARIAVEIS DE CORES */
+
+    --cor-preto-nav-bar: #000000;
+    --cor-preto-fundo: #0f0f0f;
+
+    --cor-fonte-branca: white;
+    --cor-fonte-amarela: #FFA239;
+
+    /* VARIAVEIS DE FONTES */
+
+    --fonte-nav-bar: monospace, sans-serif;
+}
+
+
+/* RESET CSS */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    color: white;
+}
+
+/* CSS DO HEADER */
+
+.cabecalho {
+    display: flex;
+    padding: 2rem;
+    justify-content: space-between;
+    background-color: var(--cor-preto-nav-bar);
+
+    font-family: var(--fonte-nav-bar);
+}
+
+.cabecalho__esquerda {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    padding: 0px 1rem 0px 0rem;
+}
+
+.icone__logo {
+    height: 2.5rem;
+}
+
+.cabecalho__botao__home {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: var(--cor-fonte-branca);
+}
+
+.cabecalho__botao__home:hover {
+    color: var(--cor-fonte-amarela);
+}
+
+.cabecalho__itens {
+    padding-right: 2rem;
+    color: var(--cor-fonte-branca);
+}
+
+.cabecalho__item {
+    font-size: 1.5em;
+    padding: 0.8rem;
+    align-items: right;
+    color: var(--cor-fonte-branca);
+    text-decoration: none;
+    font-family: var(--fonte-nav-bar);
+}
+
+.cabecalho__item:hover {
+    color: var(--cor-fonte-amarela);
+}
+
+.cabecalho__item__divisao {
+    text-decoration: none;
+    color: var(--cor-fonte-amarela);
+}
