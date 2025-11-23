@@ -107,140 +107,99 @@ body {
 }
 
 
+/* CSS SEÇÃO EM CARTAZ */
 
-/* CSS SEÇÃO 01 - CARROSSEL */
+body {
+    background-color: var(--cor-fonte-amarela);
+}
 
-.secao1_carrossel {
+.cartazFilme__box__geral {
+    display: flex;
+}
+
+.cartazFilme {
+    background-color: var(--cor-fonte-branca);
+    margin: 1.5rem 10rem;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+}
+
+.cartazFilme__box {
     display: flex;
     flex-direction: column;
-
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    animation: changeBackground 25s infinite;
-}
-@keyframes changeBackground {
-    0%, 100% {
-        background-image: url('IMG/home/secao01/Blade_Runner_Banner.jpg');
-    }
-    33% {
-        background-image: url('IMG/home/secao01/chainsaw-man__banner.jpg');
-    }
-    66% {
-        background-image: url('IMG/home/secao01/Interstellar_Banner.jpg');
-    }
+    width: 25%;
 }
 
-
-/* CSS SEÇÃO 02 - EM CARTAZ */
-
-.secao2_em__cartaz {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.secao2__titulo {
-    padding-top: 2rem;
-    color: var(--cor-preto-fundo);
-    font-size: 3rem;
-    font-style: italic;
-    font-family: var(--fonte-nav-bar);
-    font-weight: var(--fonte-peso-medio);
-}
-.secao2__titulo:hover {
-    color: var(--cor-fonte-amarela);
-}
-
-.pipoca__esquerda {
-    rotate: -20deg;
-}
-.pipoca__direita {
-    rotate: 20deg;
-}
-
-.box__cartaz {
-    padding: 5rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-.box__cartaz__filme {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px 5rem;
-
-    transition: 
-        transform 0.2s ease, 
-        background-color 0.2s ease, 
-        color 0.2s ease;
-
-    transform-origin: center center;
-    cursor: pointer;
-}
-.box__cartaz__filme:hover {
-    transform: scale(1.05);
-    background-color: #fff;
-    border-radius: 10px;
-    color: var(--cor-fonte-amarela);
-    text-decoration: underline;
-}
-
-.box__cartaz__filme__imagem {
+.cartazFilme__imagem {
     height: 500px;
     border-radius: 1.5rem;
     height: 500px;
     width: 354px;
 }
 
-.box__cartaz__filme__nome {
+.cartazFilme__icone {
+    width: 24px;
+    height: px;
+}
+
+.cartazFilme__nome {
     padding-top: 1rem;
     color: var(--cor-preto-fundo);
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-family: var(--fonte-nav-bar);
     font-weight: var(--fonte-peso-leve);
 }
 
-.secao02__botao {
+.indicacao {
+    padding: 0.3rem;
+    color: white;
+    background-color: black;
+    border: solid 1px;
+    border-radius: 0.5rem;
+}
+
+.cartazFilme__ingresso {
     text-decoration: none;
-    padding: 1rem;
-    margin: 1rem;
+    padding: 0.5rem;
+    margin: 1.5rem 1rem 0rem 1rem;
     color: var(--cor-preto-fundo);
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-style: italic;
     font-family: var(--fonte-nav-bar);
     font-weight: var(--fonte-peso-leve);
     border: solid 1px;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     background-color: #e5e5e5;
+    text-align: center;
 }
 
-.secao02__botao:hover {
+.cartazFilme__ingresso:hover {
     background-color: var(--cor-fonte-amarela);
 }
 
-
-/* CSS - CARROSSEL - SEÇÃO 3 - COMENTÁRIOS */
-
-.secao3__titulo {
-    padding-top: 2rem;
+.cartazFilme__titulo {
+    padding: 1rem 10rem 1rem 5rem;
     color: var(--cor-preto-fundo);
-    font-size: 3rem;
-    font-style: italic;
+    font-size: 2rem;
     font-family: var(--fonte-nav-bar);
-    font-weight: var(--fonte-peso-medio);
+    font-weight: var(--fonte-peso-leve);
+    font-style: italic;
+}
+
+.cartazFilme__texto {
+    padding: 0rem 3rem 3rem 5rem;
+    color: var(--cor-preto-fundo);
+    font-size: 1.2rem;
+    font-family: var(--fonte-nav-bar);
+    font-weight: var(--fonte-peso-leve);
+    text-align: justify;
+    font-style: italic;
+    font-weight: var(--fonte-peso-baixo);
+}
+
+.cartazFilme__trailer {
+    padding: 1rem 10rem 1rem 10rem;
+    width: 50rem;
+    height: 30rem;
     text-align: center;
-}
-.secao3__titulo:hover {
-    color: var(--cor-fonte-amarela);
-}
-
-.box__geral {
-    margin-top: 2rem;
-}
-
-.link__filme {
-    text-decoration: none;
 }
