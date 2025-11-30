@@ -1,41 +1,29 @@
-/* CONFIGURAÇÃO DE VARIÁVEIS */
 :root {
-
-    /* VARIAVEIS DE CORES */
-
     --cor-preto-nav-bar: #000000;
     --cor-preto-fundo: #0f0f0f;
-
     --cor-fonte-branca: white;
     --cor-fonte-amarela: #FFA239;
-
-    /* VARIAVEIS DE FONTES */
-
     --fonte-nav-bar: monospace, sans-serif;
     --fonte-peso-baixo: 300;
     --fonte-peso-leve: 400;
     --fonte-peso-medio: 600;
 }
 
-
-/* RESET CSS */
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     color: white;
+    background-color: var(--cor-fonte-amarela);
 }
-
-/* CSS DO HEADER */
 
 .cabecalho {
     display: flex;
     padding: 2rem 2.5rem;
     justify-content: space-between;
     background-color: var(--cor-preto-nav-bar);
-
     font-family: var(--fonte-nav-bar);
 }
 
@@ -46,7 +34,7 @@ body {
 
 .logo {
     color: white;
-    padding: 0px 3rem 0px 0rem;
+    padding-right: 3rem;
 }
 
 .icone__logo {
@@ -71,7 +59,6 @@ body {
 .cabecalho__item {
     font-size: 1.5em;
     padding: 0.8rem;
-    align-items: right;
     color: var(--cor-fonte-branca);
     text-decoration: none;
     font-family: var(--fonte-nav-bar);
@@ -82,18 +69,8 @@ body {
 }
 
 .cabecalho__item__divisao {
-    text-decoration: none;
     color: var(--cor-fonte-amarela);
 }
-
-.divisoria {
-    color: #0f0f0f;
-    background-color: #0f0f0f;
-    padding: 2px;
-    font-size: 0px;
-}
-
-/* CSS FOOTER */
 
 .rodape__texto {
     font-family: var(--fonte-nav-bar);
@@ -106,40 +83,34 @@ body {
     padding: 1rem;
 }
 
-
-/* CSS SEÇÃO EM CARTAZ */
-
-body {
-    background-color: var(--cor-fonte-amarela);
+.cartazFilme {
+    background-color: var(--cor-fonte-branca);
+    max-width: 1200px;
+    margin: 1.5rem auto;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
 }
 
 .cartazFilme__box__geral {
     display: flex;
-}
-
-.cartazFilme {
-    background-color: var(--cor-fonte-branca);
-    margin: 1.5rem 10rem;
-    padding: 2.5rem;
-    border-radius: 1.5rem;
+    gap: 2rem;
 }
 
 .cartazFilme__box {
     display: flex;
     flex-direction: column;
-    width: 25%;
+    max-width: 354px;
+    width: 100%;
 }
 
 .cartazFilme__imagem {
-    height: 500px;
+    width: 100%;
+    height: auto;
     border-radius: 1.5rem;
-    height: 500px;
-    width: 354px;
 }
 
 .cartazFilme__icone {
     width: 24px;
-    height: px;
 }
 
 .cartazFilme__nome {
@@ -154,14 +125,13 @@ body {
     padding: 0.3rem;
     color: white;
     background-color: black;
-    border: solid 1px;
     border-radius: 0.5rem;
 }
 
 .cartazFilme__ingresso {
     text-decoration: none;
     padding: 0.5rem;
-    margin: 1.5rem 1rem 0rem 1rem;
+    margin: 1.5rem 1rem 0 1rem;
     color: var(--cor-preto-fundo);
     font-size: 1.2rem;
     font-style: italic;
@@ -178,28 +148,73 @@ body {
 }
 
 .cartazFilme__titulo {
-    padding: 1rem 10rem 1rem 5rem;
+    padding: 1rem 0;
     color: var(--cor-preto-fundo);
     font-size: 2rem;
     font-family: var(--fonte-nav-bar);
-    font-weight: var(--fonte-peso-leve);
     font-style: italic;
 }
 
 .cartazFilme__texto {
-    padding: 0rem 3rem 3rem 5rem;
+    padding: 0 0 1.5rem 0;
     color: var(--cor-preto-fundo);
     font-size: 1.2rem;
     font-family: var(--fonte-nav-bar);
-    font-weight: var(--fonte-peso-leve);
     text-align: justify;
-    font-style: italic;
     font-weight: var(--fonte-peso-baixo);
+    font-style: italic;
 }
 
 .cartazFilme__trailer {
-    padding: 1rem 10rem 1rem 10rem;
-    width: 50rem;
-    height: 30rem;
-    text-align: center;
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16/9;
+    height: auto;
+    margin: 1rem auto;
+}
+
+
+/* RESPONSIVO TOTAL */
+@media (max-width: 900px) {
+
+    .cabecalho {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .cabecalho__itens {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .cartazFilme {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .cartazFilme__box__geral {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cartazFilme__box {
+        max-width: 300px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .cartazFilme__titulo,
+    .cartazFilme__texto {
+        width: 100%;
+        padding: 1rem 0;
+        text-align: left;
+    }
+
+    .cartazFilme__trailer {
+        width: 100%;
+        max-width: 100%;
+        margin: 1rem 0;
+    }
 }
