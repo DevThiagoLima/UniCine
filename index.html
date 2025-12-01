@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <title>Página Inicial</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho__esquerda">
+            <a class="logo" href="index.html"><img class="icone__logo" src="IMG/home/icone__logo.png" alt="Logo"></a>
+            <a class="cabecalho__botao__home" href="index.html">UniCine</a>
+        </div>
+
+        <div class="cabecalho__itens">
+            <a class="cabecalho__item" onclick="scrollToSection('topo')">Home</a>
+            <a class="cabecalho__item__divisao">|</a>
+            <a class="cabecalho__item" onclick="scrollToSection('secao-cartaz')">Em Cartaz</a>
+            <a class="cabecalho__item__divisao">|</a>
+            <a class="cabecalho__item" onclick="scrollToSection('secao-breve')">Em Breve</a>
+            <a class="cabecalho__item__divisao">|</a>
+            <a class="cabecalho__item" href="html/sobre.html">Grupo</a>
+        </div>
+    </header>
+
+    <section id="topo" class="secao1_carrossel">
+        <div class="carrossel-conteudo"></div>
+    </section>
+
+    <hr>
+
+    <section id="secao-cartaz" class="secao2_em__cartaz">
+        <h1 class="secao2__titulo"><img class="pipoca__esquerda" src="IMG/home/secao02/pipoca.png" alt=""> Em Cartaz <img class="pipoca__direita" src="IMG/home/secao02/pipoca.png" alt=""></h1>
+
+        <div class="box__cartaz swiper swiper-cartaz">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <a class="link__filme" href="HTML/cartazFilme01.html">
+                        <div class="box__cartaz__filme">
+                            <img class="box__cartaz__filme__imagem" src="IMG/home/secao02/Blade-Runner__poster.jpg" alt="Blade Runner 2049">
+                            <b><p class="box__cartaz__filme__nome">Blade Runner 2049</p></b>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a class="link__filme" href="HTML/cartazFilme02.html">
+                        <div class="box__cartaz__filme">
+                            <img class="box__cartaz__filme__imagem" src="IMG/home/secao02/chainsaw-man__poster.jpg" alt="Chainsaw Man">
+                            <b><p class="box__cartaz__filme__nome">Chainsaw Man: O Filme - Arco da Reze</p></b>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a class="link__filme" href="HTML/cartazFilme03.html">
+                        <div class="box__cartaz__filme">
+                            <img class="box__cartaz__filme__imagem" src="IMG/home/secao02/Interstellar_poster.jpg" alt="Interestelar">
+                            <b><p class="box__cartaz__filme__nome">Interestelar</p></b>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a class="link__filme" href="HTML/cartazFilme04.html">
+                        <div class="box__cartaz__filme">
+                            <img class="box__cartaz__filme__imagem" src="IMG/home/secao02/Django_poster.jpg" alt="Django Livre">
+                            <b><p class="box__cartaz__filme__nome">Django Livre</p></b>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a class="link__filme" href="HTML/cartazFilme05.html">
+                        <div class="box__cartaz__filme">
+                            <img class="box__cartaz__filme__imagem" src="IMG/home/secao02/altodacompadecida2_poster.jpg" alt="O Auto da Compadecida 2">
+                            <b><p class="box__cartaz__filme__nome">O Auto da Compadecida 2</p></b>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="swiper-button-prev cartaz-prev"></div>
+            <div class="swiper-button-next cartaz-next"></div>
+        </div>
+
+        <a class="secao02__botao" href="">Programação Completa</a>
+    </section>
+
+    <p class="divisoria">.</p>
+
+    <section id="secao-breve" class="secao3__em__breve">
+        <i><h1 class="secao3__titulo"><img class="pipoca__esquerda" src="IMG/home/secao03/ampulheta.png" alt=""> Em Breve <img class="pipoca__direita" src="IMG/home/secao03/ampulheta.png" alt=""></h1></i>
+
+        <div class="swiper swiper-breve">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="box__geral">
+                        <div class="box1">
+                            <div class="box1__div__texto">
+                                <a class="link__filme" href="HTML/breveFilme01.html">
+                                    <div class="box__cartaz__filme">
+                                        <img class="box__cartaz__filme__imagem imagem_swipper" src="IMG/home/secao03/FNAF-2-poster.webp" alt="Five Nights at Freddy's 2">
+                                        <b><p class="box__cartaz__filme__nome">Five Nights at Freddy's 2</p></b>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="box__geral">
+                        <div class="box1">
+                            <div class="box1__div__texto">
+                                <div class="box__cartaz__filme">
+                                    <img class="box__cartaz__filme__imagem imagem_swipper" src="IMG/home/secao03/jujutsu_kaisen_poster.webp" alt="Jujutsu Kaisen">
+                                    <b><p class="box__cartaz__filme__nome">Jujutsu Kaisen - Season 3</p></b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="box__geral">
+                        <div class="box1">
+                            <div class="box1__div__texto">
+                                <div class="box__cartaz__filme">
+                                    <img class="box__cartaz__filme__imagem imagem_swipper" src="IMG/home/secao03/vingadores_poster.webp" alt="Vingadores Doomsday">
+                                    <b><p class="box__cartaz__filme__nome">Vingadores Doomsday</p></b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="box__geral">
+                        <div class="box1">
+                            <div class="box1__div__texto">
+                                <div class="box__cartaz__filme">
+                                    <img class="box__cartaz__filme__imagem imagem_swipper" src="IMG/home/secao03/Super_mario_poster.jpg" alt="Super Mario Bros 2">
+                                    <b><p class="box__cartaz__filme__nome">Super Mario Bros 2</p></b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="box__geral">
+                        <div class="box1">
+                            <div class="box1__div__texto">
+                                <div class="box__cartaz__filme">
+                                    <img class="box__cartaz__filme__imagem imagem_swipper" src="IMG/home/secao03/sillent-hill_poster.jpg" alt="Sillent Hill">
+                                    <b><p class="box__cartaz__filme__nome">Sillent Hill - Regresso Para o Inferno</p></b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-button-prev breve-prev"></div>
+            <div class="swiper-button-next breve-next"></div>
+        </div>
+    </section>
+
+    <p class="divisoria">.</p>
+
+    <footer class="rodape">
+        <p class="rodape__texto"><img class="icone__logo" src="IMG/home/icone__logo.png" alt="Logo"> "Entretenimento de qualidade, sempre ao seu alcance." <img class="icone__logo" src="IMG/home/icone__logo.png" alt="Logo"></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiperCartaz = new Swiper(".swiper-cartaz", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: ".cartaz-next",
+                prevEl: ".cartaz-prev"
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1
+                },
+                768: {
+                    slidesPerView: 2
+                },
+                1024: {
+                    slidesPerView: 3
+                }
+            }
+        });
+
+        var swiperBreve = new Swiper(".swiper-breve", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".breve-next",
+                prevEl: ".breve-prev"
+            },
+            loop: true,
+            autoplay: {
+                delay: 8000,
+                disableOnInteraction: false
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1
+                },
+                768: {
+                    slidesPerView: 2
+                },
+                1024: {
+                    slidesPerView: 3
+                }
+            }
+        });
+
+        function scrollToSection(id) {
+            const section = document.getElementById(id);
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    </script>
+</body>
+</html>

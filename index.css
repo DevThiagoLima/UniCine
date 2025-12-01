@@ -1,0 +1,249 @@
+:root {
+    --cor-preto-nav-bar: #000000;
+    --cor-preto-fundo: #0f0f0f;
+    --cor-fonte-branca: white;
+    --cor-fonte-amarela: #FFA239;
+    --fonte-nav-bar: monospace, sans-serif;
+    --fonte-peso-baixo: 300;
+    --fonte-peso-leve: 400;
+    --fonte-peso-medio: 600;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    color: white;
+}
+
+.cabecalho {
+    display: flex;
+    padding: 2rem 2.5rem;
+    justify-content: space-between;
+    background-color: var(--cor-preto-nav-bar);
+    font-family: var(--fonte-nav-bar);
+}
+
+.cabecalho__esquerda {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    padding: 0px 3rem 0px 0rem;
+}
+
+.icone__logo {
+    height: 2.5rem;
+}
+
+.cabecalho__botao__home {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: var(--cor-fonte-branca);
+}
+
+.cabecalho__botao__home:hover {
+    color: var(--cor-fonte-amarela);
+}
+
+.cabecalho__itens {
+    padding-right: 2.5rem;
+    color: var(--cor-fonte-branca);
+}
+
+.cabecalho__item {
+    font-size: 1.5em;
+    padding: 0.8rem;
+    align-items: right;
+    color: var(--cor-fonte-branca);
+    text-decoration: none;
+    font-family: var(--fonte-nav-bar);
+}
+
+.cabecalho__item:hover {
+    color: var(--cor-fonte-amarela);
+}
+
+.cabecalho__item__divisao {
+    text-decoration: none;
+    color: var(--cor-fonte-amarela);
+}
+
+.divisoria {
+    color: #0f0f0f;
+    background-color: #0f0f0f;
+    padding: 2px;
+    font-size: 0px;
+}
+
+.rodape__texto {
+    font-family: var(--fonte-nav-bar);
+    font-weight: var(--fonte-peso-baixo);
+    font-size: 2rem;
+    color: var(--cor-fonte-branca);
+    background-color: black;
+    text-align: center;
+    font-style: italic;
+    padding: 1rem;
+}
+
+.secao1_carrossel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    animation: changeBackground 25s infinite;
+}
+
+@keyframes changeBackground {
+    0%, 100% {
+        background-image: url("IMG/home/secao01/Blade_Runner_Banner.jpg");
+    }
+    33% {
+        background-image: url("IMG/home/secao01/chainsaw-man__banner.jpg");
+    }
+    66% {
+        background-image: url("IMG/home/secao01/Interstellar_Banner.jpg");
+    }
+}
+
+.secao2_em__cartaz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secao2__titulo {
+    padding-top: 2rem;
+    color: var(--cor-preto-fundo);
+    font-size: 3rem;
+    font-style: italic;
+    font-family: var(--fonte-nav-bar);
+    font-weight: var(--fonte-peso-medio);
+}
+
+.secao2__titulo:hover {
+    color: var(--cor-fonte-amarela);
+}
+
+.pipoca__esquerda {
+    rotate: -20deg;
+}
+
+.pipoca__direita {
+    rotate: 20deg;
+}
+
+.box__cartaz {
+    padding: 5rem 3rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.box__cartaz__filme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 3rem;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    transform-origin: center center;
+    cursor: pointer;
+}
+
+.box__cartaz__filme:hover {
+    transform: scale(1.05);
+    background-color: #fff;
+    border-radius: 10px;
+    color: var(--cor-fonte-amarela);
+    text-decoration: underline;
+}
+
+.box__cartaz__filme__imagem {
+    height: 500px;
+    border-radius: 1.5rem;
+    width: 354px;
+}
+
+.box__cartaz__filme__nome {
+    padding-top: 1rem;
+    color: var(--cor-preto-fundo);
+    font-size: 1.3rem;
+    font-family: var(--fonte-nav-bar);
+    font-weight: var(--fonte-peso-leve);
+}
+
+.secao02__botao {
+    text-decoration: none;
+    padding: 1rem;
+    margin: 1rem;
+    color: var(--cor-preto-fundo);
+    font-size: 2rem;
+    font-style: italic;
+    font-family: var(--fonte-nav-bar);
+    font-weight: var(--fonte-peso-leve);
+    border: solid 1px;
+    border-radius: 1rem;
+    background-color: #e5e5e5;
+}
+
+.secao02__botao:hover {
+    background-color: var(--cor-fonte-amarela);
+}
+
+.secao3__titulo {
+    padding-top: 2rem;
+    color: var(--cor-preto-fundo);
+    font-size: 3rem;
+    font-style: italic;
+    font-family: var(--fonte-nav-bar);
+    font-weight: var(--fonte-peso-medio);
+    text-align: center;
+}
+
+.secao3__titulo:hover {
+    color: var(--cor-fonte-amarela);
+}
+
+.box__geral {
+    margin-top: 2rem;
+}
+
+.link__filme {
+    text-decoration: none;
+}
+
+.swiper-cartaz {
+    width: 100%;
+}
+
+.swiper-cartaz .swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.cartaz-prev,
+.cartaz-next {
+    color: black;
+}
+
+.swiper-breve {
+    width: 100%;
+    padding: 4rem 3rem;
+    box-sizing: border-box;
+}
+
+.swiper-breve .swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.breve-prev,
+.breve-next {
+    color: black;
+}
