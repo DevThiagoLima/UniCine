@@ -1,0 +1,130 @@
+@baseUrl = http://localhost:3000
+@contentType = application/json
+
+### Health
+GET {{baseUrl}}/health
+
+### Listar filmes (inicial)
+GET {{baseUrl}}/filmes
+
+### Criar filme
+# @name criarFilme
+POST {{baseUrl}}/filmes
+Content-Type: {{contentType}}
+
+{
+  "titulo": "circulo de fogo",
+  "duracaoMin": 245,
+  "classificacao": "23"
+}
+
+### Listar salas (inicial)
+GET {{baseUrl}}/salas
+
+### Criar sala
+# @name criarSala
+POST {{baseUrl}}/salas
+Content-Type: {{contentType}}
+
+{
+  "nome": "Sala 1",
+  "capacidade": 30
+}
+
+### Criar sessão (usa filmeId e salaId)
+# @name criarSessao
+POST {{baseUrl}}/sessoes
+Content-Type: {{contentType}}
+
+{
+  "filmeId": "{{criarFilme.response.body.$.id}}",
+  "salaId": "{{criarSala.response.body.$.id}}",
+  "data": "2025-12-10",
+  "horario": "20:00"
+}
+
+### Listar sessões
+GET {{baseUrl}}/sessoes
+
+### Listar assentos e reservas temporárias da sessão
+GET {{baseUrl}}/sessoes/{{criarSessao.response.body.$.sessao.id}}/assentos
+
+### Criar reserva temporária (A1, A2)
+# @name criarReservaTemp
+POST {{baseUrl}}/reservas-temporarias
+Content-Type: {{contentType}}
+
+{
+  "sessaoId": "{{criarSessao.response.body.$.sessao.id}}",
+  "assentos": ["A1", "A2"]
+}
+
+### Emitir ingresso usando reserva temporária
+POST {{baseUrl}}/ingressos
+Content-Type: {{contentType}}
+
+{
+  "clienteNome": "Cliente Teste",
+  "cpf": "52998224725",
+  "email": "cliente@exemplo.com",
+  "sessaoId": "{{criarSessao.response.body.$.sessao.id}}",
+  "assentos": ["A1", "A2"],
+  "reservaTemporariaId": "{{criarReservaTemp.response.body.$.id}}"
+}
+
+### Listar ingressos
+GET {{baseUrl}}/ingressos
+
+### Ver assentos após emissão (A1, A2 devem constar reservados)
+GET {{baseUrl}}/sessoes/{{criarSessao.response.body.$.sessao.id}}/assentos
+
+### Tentativa de emitir ingresso em assento já reservado (A1) -> 409
+POST {{baseUrl}}/ingressos
+Content-Type: {{contentType}}
+
+{
+  "clienteNome": "Outro Cliente",
+  "cpf": "52998224725",
+  "email": "outro@exemplo.com",
+  "sessaoId": "{{criarSessao.response.body.$.sessao.id}}",
+  "assentos": ["A1"]
+}
+
+### Criar outra reserva temporária sem emitir (A3)
+# @name criarReservaTemp2
+POST {{baseUrl}}/reservas-temporarias
+Content-Type: {{contentType}}
+
+{
+  "sessaoId": "{{criarSessao.response.body.$.sessao.id}}",
+  "assentos": ["A3"]
+}
+
+### Tentar emitir ingresso em assento com reserva temporária ativa sem informar reserva -> 409
+POST {{baseUrl}}/ingressos
+Content-Type: {{contentType}}
+
+{
+  "clienteNome": "Sem Reserva",
+  "cpf": "52998224725",
+  "email": "semreserva@exemplo.com",
+  "sessaoId": "{{criarSessao.response.body.$.sessao.id}}",
+  "assentos": ["A3"]
+}
+
+### Emitir ingresso informando reserva temporária ativa (A3)
+POST {{baseUrl}}/ingressos
+Content-Type: {{contentType}}
+
+{
+  "clienteNome": "Com Reserva",
+  "cpf": "52998224725",
+  "email": "comreserva@exemplo.com",
+  "sessaoId": "{{criarSessao.response.body.$.sessao.id}}",
+  "assentos": ["A3"],
+  "reservaTemporariaId": "{{criarReservaTemp2.response.body.$.id}}"
+}
+
+### Cancelar reserva temporária (exemplo de cancelamento manual)
+DELETE {{baseUrl}}/reservas-temporarias/{{criarReservaTemp2.response.body.$.id}}
+
